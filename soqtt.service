@@ -1,0 +1,13 @@
+[Unit]
+Description=soqtt
+After=network.target
+
+[Service]
+User=soqtt
+WorkingDirectory=/opt/soqtt
+ExecStart=/opt/soqtt/soqtt -h
+Restart=always
+RestartSec=5
+StartLimitIntervalSec=0
+[Install]
+WantedBy=multi-user.target
